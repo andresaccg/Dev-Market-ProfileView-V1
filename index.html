@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Devhub — Perfil de Creador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- Live region: spoken feedback for SR users -->
+    <div id="sr-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <header class="topbar glass" role="banner">
+      <div class="topbar__left">
+        <div class="brand" aria-label="Devhub">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">Devhub</span>
+        </div>
+      </div>
+
+      <div class="topbar__center">
+        <label class="sr-only" for="global-search">Buscar creadores o skills</label>
+        <div class="search glass">
+          <span class="search__icon" aria-hidden="true">⌘</span>
+          <input
+            id="global-search"
+            class="search__input"
+            type="search"
+            placeholder="Buscar creadores, skills, stacks…"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <button class="icon-btn glass" type="button" id="btn-notifs" aria-label="Notificaciones">
+          <span aria-hidden="true">🔔</span>
+          <span class="badge" id="notifs-badge" hidden>0</span>
+        </button>
+        <button class="icon-btn glass" type="button" id="btn-messages" aria-label="Mensajes">
+          <span aria-hidden="true">💬</span>
+        </button>
+        <button class="avatar-btn glass" type="button" id="btn-user" aria-label="Menú de usuario">
+          <img
+            class="avatar avatar--sm"
+            alt="Tu avatar"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cdefs%3E%3CradialGradient id='g' cx='30%25' cy='30%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='.95'/%3E%3Cstop offset='100%25' stop-color='%23d8e8ff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='80' height='80' rx='18' fill='url(%23g)'/%3E%3Cpath d='M18 60c6-10 38-10 44 0' fill='%230a1629' fill-opacity='.25'/%3E%3Ccircle cx='40' cy='34' r='12' fill='%230a1629' fill-opacity='.22'/%3E%3C/svg%3E"
+          />
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar glass" aria-label="Navegación">
+        <nav class="nav">
+          <a class="nav__item nav__item--active" href="#" data-nav="profile" aria-current="page">
+            <span class="nav__icon" aria-hidden="true">👤</span>
+            <span class="nav__label">Perfil</span>
+          </a>
+          <a class="nav__item" href="#" data-nav="explore">
+            <span class="nav__icon" aria-hidden="true">✨</span>
+            <span class="nav__label">Explorar</span>
+          </a>
+          <a class="nav__item" href="#" data-nav="contracts">
+            <span class="nav__icon" aria-hidden="true">🧾</span>
+            <span class="nav__label">Contratos</span>
+          </a>
+          <a class="nav__item" href="#" data-nav="billing">
+            <span class="nav__icon" aria-hidden="true">💳</span>
+            <span class="nav__label">Suscripción</span>
+          </a>
+          <a class="nav__item" href="#" data-nav="settings">
+            <span class="nav__icon" aria-hidden="true">⚙️</span>
+            <span class="nav__label">Ajustes</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__footer">
+          <div class="mini glass" role="note" aria-label="Estado de presencia">
+            <div class="mini__row">
+              <span class="dot dot--online" id="presence-dot" aria-hidden="true"></span>
+              <span class="mini__text" id="presence-text">Online</span>
+            </div>
+            <div class="mini__sub" id="presence-sub">Heartbeat cada 30s</div>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="main" role="main" tabindex="-1">
+        <section class="container">
+          <!-- VIEW: PROFILE -->
+          <section class="view is-active" data-view="profile" aria-label="Vista: Perfil">
+            <article class="profile glass" aria-label="Perfil del creador">
+            <div class="profile__hero">
+              <div class="profile__identity">
+                <img
+                  class="avatar avatar--lg"
+                  alt="Foto de perfil de Andrés Camilo"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cdefs%3E%3CradialGradient id='g' cx='30%25' cy='30%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='.95'/%3E%3Cstop offset='70%25' stop-color='%23dff0ff'/%3E%3Cstop offset='100%25' stop-color='%23b9d7ff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='160' height='160' rx='36' fill='url(%23g)'/%3E%3Cpath d='M34 128c12-22 80-22 92 0' fill='%230a1629' fill-opacity='.22'/%3E%3Ccircle cx='80' cy='70' r='24' fill='%230a1629' fill-opacity='.2'/%3E%3C/svg%3E"
+                />
+                <div class="id">
+                  <h1 class="id__name" id="page-title" tabindex="-1">Andrés Camilo</h1>
+                  <p class="id__handle">@andres.camilo · Web & Apps</p>
+                  <p class="id__headline">Diseño y desarrollo de productos con performance y estética Apple.</p>
+                  <div class="badges" aria-label="Insignias">
+                    <span class="badge-pill glass">Verificada</span>
+                    <span class="badge-pill glass">Top Rated</span>
+                    <span class="badge-pill badge-pill--premium glass">Premium</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile__cta" aria-label="Acciones">
+                <button class="btn btn--primary" type="button" id="btn-hire">Contratar</button>
+                <button class="btn btn--glass" type="button" id="btn-message">Mensaje</button>
+                <button class="btn btn--glass" type="button" id="btn-follow" aria-pressed="false">
+                  Seguir
+                </button>
+                <div class="rating glass" role="group" aria-label="Reputación">
+                  <div class="stars" aria-label="4.9 de 5 estrellas">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                  <div class="rating__meta">
+                    <button class="link" type="button" id="btn-reviews" aria-haspopup="dialog">
+                      4.9 · 128 reviews
+                    </button>
+                    <div class="muted">Sólo tras contratos completados</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile__meta">
+              <div class="meta glass" aria-label="Ubicación y disponibilidad">
+                <div class="meta__row">
+                  <span class="meta__k">Ubicación</span>
+                  <span class="meta__v">Colombia (UTC-5)</span>
+                </div>
+                <div class="meta__row">
+                  <span class="meta__k">Disponibilidad</span>
+                  <span class="meta__v"><span class="dot dot--online" aria-hidden="true"></span> Disponible</span>
+                </div>
+                <div class="meta__row">
+                  <span class="meta__k">Skills</span>
+                  <span class="meta__v">React · Node · SwiftUI · UX · AWS</span>
+                </div>
+              </div>
+
+              <div class="pitch glass" aria-label="Biografía">
+                <h2 class="section-title">Sobre mí</h2>
+                <p class="p">
+                  Construyo experiencias premium con obsesión por el detalle: accesibilidad, animación orgánica,
+                  arquitectura escalable y rendimiento real. Trabajo con clientes que valoran claridad, velocidad y diseño.
+                </p>
+              </div>
+            </div>
+
+            <div class="tabs" aria-label="Secciones del perfil">
+              <div class="tablist" role="tablist" aria-label="Secciones">
+                <button class="tab is-active" type="button" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">
+                  Sobre mí
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-portfolio" aria-controls="panel-portfolio" aria-selected="false">
+                  Portafolio
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false">
+                  Experiencia
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false">
+                  Educación
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-certs" aria-controls="panel-certs" aria-selected="false">
+                  Certificaciones
+                </button>
+                <button class="tab" type="button" role="tab" id="tab-reviews" aria-controls="panel-reviews" aria-selected="false">
+                  Reviews
+                </button>
+              </div>
+
+              <div class="panels">
+                <section class="panel is-active" role="tabpanel" id="panel-about" aria-labelledby="tab-about" tabindex="-1">
+                  <div class="grid">
+                    <div class="card glass">
+                      <h3 class="card__title">Stack</h3>
+                      <ul class="list">
+                        <li><span class="pill glass">React</span><span class="pill glass">TypeScript</span><span class="pill glass">Node</span></li>
+                        <li><span class="pill glass">SwiftUI</span><span class="pill glass">Figma</span><span class="pill glass">A11y</span></li>
+                      </ul>
+                    </div>
+                    <div class="card glass">
+                      <h3 class="card__title">Enfoque</h3>
+                      <p class="p muted">
+                        Arquitectura modular, microservicios cuando aporta valor, y tiempo real con SSE/WS. Entregas
+                        iterativas con métricas y pruebas.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel" role="tabpanel" id="panel-portfolio" aria-labelledby="tab-portfolio" tabindex="-1">
+                  <div class="portfolio">
+                    <article class="project glass" tabindex="0" role="article" aria-label="Proyecto: Landing premium">
+                      <div class="project__thumb" aria-hidden="true"></div>
+                      <div class="project__body">
+                        <h3 class="project__title">Landing premium</h3>
+                        <p class="project__desc">SPA con glass UI, SEO híbrido, y performance real (LCP < 2s).</p>
+                        <div class="project__meta">
+                          <span class="tag glass">React</span>
+                          <span class="tag glass">A11y</span>
+                          <span class="tag glass">AWS</span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="project glass" tabindex="0" role="article" aria-label="Proyecto: App de marketplace">
+                      <div class="project__thumb project__thumb--alt" aria-hidden="true"></div>
+                      <div class="project__body">
+                        <h3 class="project__title">App de marketplace</h3>
+                        <p class="project__desc">Chat WS, notificaciones SSE, reputación y suscripciones.</p>
+                        <div class="project__meta">
+                          <span class="tag glass">Socket.IO</span>
+                          <span class="tag glass">SSE</span>
+                          <span class="tag glass">MySQL</span>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="project glass" tabindex="0" role="article" aria-label="Proyecto: Panel de contratos">
+                      <div class="project__thumb project__thumb--alt2" aria-hidden="true"></div>
+                      <div class="project__body">
+                        <h3 class="project__title">Panel de contratos</h3>
+                        <p class="project__desc">Estados, hitos y auditoría. UI guiada con focus y feedback hablado.</p>
+                        <div class="project__meta">
+                          <span class="tag glass">UX</span>
+                          <span class="tag glass">A11y</span>
+                          <span class="tag glass">Billing</span>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience" tabindex="-1">
+                  <div class="timeline">
+                    <div class="entry glass">
+                      <h3 class="entry__title">Lead Full-Stack · Studio</h3>
+                      <div class="entry__meta">2023 — Hoy · Remoto</div>
+                      <p class="p muted">Sistemas de tiempo real, escalabilidad horizontal, y UI premium para productos.</p>
+                    </div>
+                    <div class="entry glass">
+                      <h3 class="entry__title">Senior Frontend · SaaS</h3>
+                      <div class="entry__meta">2020 — 2023 · Colombia</div>
+                      <p class="p muted">Design systems, A11y, performance budgets y observabilidad.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" tabindex="-1">
+                  <div class="timeline">
+                    <div class="entry glass">
+                      <h3 class="entry__title">Ingeniería de Software</h3>
+                      <div class="entry__meta">2016 — 2020</div>
+                      <p class="p muted">Fundamentos de arquitectura, sistemas distribuidos y diseño centrado en el usuario.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel" role="tabpanel" id="panel-certs" aria-labelledby="tab-certs" tabindex="-1">
+                  <div class="grid">
+                    <div class="card glass">
+                      <h3 class="card__title">AWS</h3>
+                      <p class="p muted">Arquitectura serverless y eventos.</p>
+                    </div>
+                    <div class="card glass">
+                      <h3 class="card__title">Accesibilidad</h3>
+                      <p class="p muted">Gestión de foco guiada y lectores de pantalla en SPAs.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="panel" role="tabpanel" id="panel-reviews" aria-labelledby="tab-reviews" tabindex="-1">
+                  <div class="reviews">
+                    <article class="review glass">
+                      <div class="review__top">
+                        <strong>Cliente: Diego</strong>
+                        <span class="muted" aria-label="5 de 5 estrellas">★★★★★</span>
+                      </div>
+                      <p class="p muted">Entrega impecable, comunicación clara, performance top.</p>
+                    </article>
+                    <article class="review glass">
+                      <div class="review__top">
+                        <strong>Cliente: Sofía</strong>
+                        <span class="muted" aria-label="5 de 5 estrellas">★★★★★</span>
+                      </div>
+                      <p class="p muted">Excelente criterio de UX y mucha atención al detalle.</p>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </article>
+          </section>
+
+          <!-- VIEW: EXPLORE -->
+          <section class="view" data-view="explore" aria-label="Vista: Explorar" hidden>
+            <article class="page glass">
+              <header class="page__header">
+                <div>
+                  <h1 class="page__title" tabindex="-1">Explorar creadores</h1>
+                  <p class="page__sub muted">Encuentra talento por skills, reputación y disponibilidad.</p>
+                </div>
+                <div class="page__actions">
+                  <label class="sr-only" for="explore-skill">Filtrar por skill</label>
+                  <select class="field glass" id="explore-skill">
+                    <option value="all">Todos</option>
+                    <option value="react">React</option>
+                    <option value="backend">Backend</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="ux">UX</option>
+                  </select>
+                  <label class="sr-only" for="explore-sort">Ordenar</label>
+                  <select class="field glass" id="explore-sort">
+                    <option value="top">Top Rated</option>
+                    <option value="recent">Recientes</option>
+                    <option value="price_low">Precio (↓)</option>
+                    <option value="price_high">Precio (↑)</option>
+                  </select>
+                </div>
+              </header>
+
+              <div class="results" id="explore-results" role="list" aria-label="Resultados"></div>
+            </article>
+          </section>
+
+          <!-- VIEW: CONTRACTS -->
+          <section class="view" data-view="contracts" aria-label="Vista: Contratos" hidden>
+            <article class="page glass">
+              <header class="page__header">
+                <div>
+                  <h1 class="page__title" tabindex="-1">Contratos</h1>
+                  <p class="page__sub muted">Drafts, activos y completados. Reviews sólo tras completar.</p>
+                </div>
+                <div class="page__actions">
+                  <button class="btn btn--glass" type="button" id="btn-new-contract">Nuevo contrato</button>
+                </div>
+              </header>
+
+              <div class="split">
+                <section class="pane glass" aria-label="Lista de contratos">
+                  <div class="pane__header">
+                    <strong>Lista</strong>
+                    <span class="muted" id="contracts-count">0</span>
+                  </div>
+                  <div class="listbox" id="contracts-list" role="listbox" aria-label="Contratos"></div>
+                </section>
+
+                <section class="pane glass" aria-label="Detalle de contrato">
+                  <div class="pane__header">
+                    <strong>Detalle</strong>
+                    <span class="muted" id="contract-status-pill">—</span>
+                  </div>
+                  <div class="contract" id="contract-detail">
+                    <p class="p muted">Selecciona un contrato para ver el detalle.</p>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </section>
+
+          <!-- VIEW: MESSAGES -->
+          <section class="view" data-view="messages" aria-label="Vista: Mensajes" hidden>
+            <article class="page glass">
+              <header class="page__header">
+                <div>
+                  <h1 class="page__title" tabindex="-1">Mensajes</h1>
+                  <p class="page__sub muted">Chat bidireccional (simulado) con presencia y typing.</p>
+                </div>
+                <div class="page__actions">
+                  <span class="chip glass" id="ws-state" aria-label="Estado de conexión">WS: Conectado</span>
+                </div>
+              </header>
+
+              <div class="chat">
+                <aside class="chat__left glass" aria-label="Conversaciones">
+                  <div class="pane__header">
+                    <strong>Conversaciones</strong>
+                    <span class="muted">3</span>
+                  </div>
+                  <div class="listbox" id="conversations" role="listbox" aria-label="Lista de conversaciones"></div>
+                </aside>
+
+                <section class="chat__right glass" aria-label="Conversación">
+                  <div class="chat__top">
+                    <div class="chat__who">
+                      <strong id="chat-title">—</strong>
+                      <span class="muted" id="chat-presence">—</span>
+                    </div>
+                    <div class="chat__meta">
+                      <span class="muted" id="chat-typing" aria-live="polite"></span>
+                    </div>
+                  </div>
+
+                  <div class="chat__messages" id="chat-messages" role="log" aria-label="Mensajes" aria-relevant="additions text"></div>
+
+                  <form class="chat__composer" id="chat-form">
+                    <label class="sr-only" for="chat-input">Escribir mensaje</label>
+                    <input class="field glass" id="chat-input" type="text" placeholder="Escribe un mensaje…" autocomplete="off" />
+                    <button class="btn btn--primary" type="submit">Enviar</button>
+                  </form>
+                </section>
+              </div>
+            </article>
+          </section>
+
+          <!-- VIEW: BILLING -->
+          <section class="view" data-view="billing" aria-label="Vista: Suscripción" hidden>
+            <article class="page glass">
+              <header class="page__header">
+                <div>
+                  <h1 class="page__title" tabindex="-1">Suscripción</h1>
+                  <p class="page__sub muted">Más visibilidad + herramientas premium para creadores.</p>
+                </div>
+                <div class="page__actions">
+                  <span class="chip glass" id="billing-state">Estado: Free</span>
+                </div>
+              </header>
+
+              <div class="plans" id="plans" aria-label="Planes"></div>
+            </article>
+          </section>
+
+          <!-- VIEW: SETTINGS -->
+          <section class="view" data-view="settings" aria-label="Vista: Ajustes" hidden>
+            <article class="page glass">
+              <header class="page__header">
+                <div>
+                  <h1 class="page__title" tabindex="-1">Ajustes</h1>
+                  <p class="page__sub muted">Preferencias de accesibilidad y experiencia.</p>
+                </div>
+              </header>
+
+              <div class="settings">
+                <section class="card glass" aria-label="Accesibilidad">
+                  <h2 class="card__title">Accesibilidad</h2>
+                  <div class="rows">
+                    <label class="row">
+                      <span>
+                        <strong>Feedback hablado</strong>
+                        <span class="row__sub muted">Anuncia transiciones y acciones (aria-live).</span>
+                      </span>
+                      <input type="checkbox" id="set-announcements" checked />
+                    </label>
+                    <label class="row">
+                      <span>
+                        <strong>Foco guiado</strong>
+                        <span class="row__sub muted">Mover foco al título del contenido nuevo.</span>
+                      </span>
+                      <input type="checkbox" id="set-guided-focus" checked />
+                    </label>
+                    <label class="row">
+                      <span>
+                        <strong>Reducir movimiento</strong>
+                        <span class="row__sub muted">Reduce animaciones (respeta prefers-reduced-motion).</span>
+                      </span>
+                      <input type="checkbox" id="set-reduce-motion" />
+                    </label>
+                  </div>
+                </section>
+
+                <section class="card glass" aria-label="Cuenta">
+                  <h2 class="card__title">Cuenta</h2>
+                  <div class="rows">
+                    <button class="btn btn--glass" type="button" id="btn-export">Exportar perfil (demo)</button>
+                    <button class="btn btn--glass" type="button" id="btn-signout">Cerrar sesión (demo)</button>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <!-- Dialog: reviews (focus trap) -->
+    <dialog class="dialog glass" id="dialog-reviews" aria-labelledby="dialog-title">
+      <form method="dialog" class="dialog__form">
+        <div class="dialog__header">
+          <h2 id="dialog-title" class="dialog__title">Reviews verificadas</h2>
+          <button class="icon-btn glass" value="close" aria-label="Cerrar">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+        <div class="dialog__body">
+          <p class="p muted">
+            Estas reviews están vinculadas a contratos completados para reducir fraude.
+          </p>
+          <div class="reviews">
+            <article class="review glass">
+              <div class="review__top">
+                <strong>Diego</strong>
+                <span class="muted" aria-label="5 de 5 estrellas">★★★★★</span>
+              </div>
+              <p class="p muted">Claridad, velocidad y diseño premium. Repetiría.</p>
+            </article>
+            <article class="review glass">
+              <div class="review__top">
+                <strong>Sofía</strong>
+                <span class="muted" aria-label="5 de 5 estrellas">★★★★★</span>
+              </div>
+              <p class="p muted">Muy buen criterio. Accesibilidad y performance excelentes.</p>
+            </article>
+          </div>
+        </div>
+        <div class="dialog__footer">
+          <button class="btn btn--glass" value="close">Cerrar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
