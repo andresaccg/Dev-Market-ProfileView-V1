@@ -1,6 +1,6 @@
 ## Devhub Marketplace SPA (sin build)
 
-Esta carpeta contiene una SPA estática (HTML/CSS/JS) con estética "Liquid Glass" y un perfil de creador (tabs, portafolio, social, reputación).
+Esta carpeta contiene una SPA estática (HTML/CSS/JS) con estética "Liquid Glass" y un perfil de creador (tabs, portafolio, social, reputación sirviendo como maqueta para futuros proyectos).
 
 ### Cómo correrla
 
